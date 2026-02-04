@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # Abaqus 2023 + Intel oneAPI HPC Toolkit (2023.1) + Visual Studio 2022 — Subroutine Setup (Windows)
 
-This repository documents a **repeatable setup** to compile and run Abaqus user subroutines (e.g., **UMAT**, **VUMAT**, **DFLUX**) on Windows with:
+This repository documents a repeatable setup to run Abaqus user subroutines (e.g., **UMAT**, **VUMAT**, **DFLUX**) on Windows with:
 
 - **Abaqus 2023** (installation follows EPFL STI-IT instructions)
 - **Intel oneAPI HPC Toolkit 2023.1** (offline installer in this repo)
@@ -20,15 +20,15 @@ This workflow follows the same as the FEAMASTER linking tutorial (environment in
 ## 1) Install Abaqus 2023 (EPFL STI-IT procedure)
 
 Follow the EPFL STI-IT page for Abaqus 2023 installation:
-- EPFL Abaqus HOWTO: https://www.epfl.ch/schools/sti/it/abaqus/  (includes the Windows installation recording and EPFL-specific install path / license notes) :contentReference[oaicite:0]{index=0}
+- EPFL Abaqus HOWTO: https://www.epfl.ch/schools/sti/it/abaqus/  (includes the Windows installation recording and EPFL-specific install path / license notes) 
 
 ---
 
 ## 2) Install Visual Studio Community 2022
 
 Download & install **Visual Studio Community** from Microsoft:
-- Visual Studio Community page: https://visualstudio.microsoft.com/vs/community/ :contentReference[oaicite:1]{index=1}
-- (Alternative downloads hub): https://visualstudio.microsoft.com/downloads/ :contentReference[oaicite:2]{index=2}
+- Visual Studio Community page: https://visualstudio.microsoft.com/vs/community/ 
+- (Alternative downloads hub): https://visualstudio.microsoft.com/downloads/ 
 
 ### Required workload
 During installation, enable:
@@ -116,6 +116,4 @@ Verify test : Abaqus/Explicit with user subroutines verification
 
 ------------------------------------------------------------
 ```
-=======
-instruction
->>>>>>> a5f1b9bf5fa5197e39f25faddfe3493c58cfb594
+
