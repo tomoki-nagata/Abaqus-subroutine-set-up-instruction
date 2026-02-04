@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Abaqus 2023 + Intel oneAPI HPC Toolkit (2023.1) + Visual Studio 2022 — Subroutine Setup (Windows)
 
 This repository documents a **repeatable setup** to compile and run Abaqus user subroutines (e.g., **UMAT**, **VUMAT**, **DFLUX**) on Windows with:
@@ -115,3 +116,6 @@ Verify test : Abaqus/Explicit with user subroutines verification
 
 ------------------------------------------------------------
 ```
+=======
+instruction
+>>>>>>> a5f1b9bf5fa5197e39f25faddfe3493c58cfb594
