@@ -93,7 +93,7 @@ call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build
 
 This forces Abaqus Command to always start with the correct compiler environment.
 
-## 7) Modify the Abaqus shortcut **Target** (Reccomend watching the video (Step 5))
+## 7) Modify the Abaqus shortcut **Target** (Recommend watching the video (Step 5))
 
 In the video, instead of only editing `abq2023.bat`, you can **link the compiler at the shortcut level** by changing the **Target** field of the Abaqus shortcut (Abaqus Command / Abaqus CAE).  
 This ensures the Intel oneAPI + Visual Studio environment is loaded every time you launch Abaqus from the Start Menu.
