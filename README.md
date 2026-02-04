@@ -93,7 +93,38 @@ call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build
 
 This forces Abaqus Command to always start with the correct compiler environment.
 
-## 7) Verify Abaqus can compile user subroutines
+## 7) Modify the Abaqus shortcut **Target** (Reccomend watching the video (Step 5))
+
+In the video, instead of only editing `abq2023.bat`, you can **link the compiler at the shortcut level** by changing the **Target** field of the Abaqus shortcut (Abaqus Command / Abaqus CAE).  
+This ensures the Intel oneAPI + Visual Studio environment is loaded every time you launch Abaqus from the Start Menu.
+
+### 7.1 Locate the Abaqus 2023 shortcut
+1. Open **Windows Start Menu**
+2. Find **Abaqus 2023** (Abaqus Command or Abaqus CAE)
+3. Right-click → **More** → **Open file location**
+4. In the folder that opens, right-click the shortcut (e.g., **Abaqus Command**) → **Properties**
+
+### 7.2 Edit the **Target** field (Abaqus Command)
+
+#### (A) Copy the original target (backup)
+In **Properties → Shortcut → Target**, copy the original text somewhere (e.g., into a note) so you can revert anytime.
+
+#### (B) Replace Target with a compiler-initialized target
+Use your Intel oneAPI compiler env script first, then call the original Abaqus command:
+
+**Recommended Target (Abaqus Command):**
+```bash
+"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\env\vars.bat" intel64 vs2022 & C:\Windows\System32\cmd.exe /k
+```
+
+### 7.3 Edit the Target field (Abaqus CAE)
+If you want Abaqus/CAE to launch with the same compiler environment, edit the Abaqus CAE shortcut similarly:
+```bash
+"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\env\vars.bat" intel64 vs2022 & abq2023 cae
+```
+
+
+## 8) Verify Abaqus can compile user subroutines
 
 Run **Abaqus Verification** , then if you can check following texts in the command prompt, the subroutine set up is successfully completed.
 
